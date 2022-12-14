@@ -1,0 +1,42 @@
+openapi: 3.0.1
+info:
+  title: "Jokes API"
+  description: |
+    API for the Jokes system.
+  version: 1.0.0-SNAPSHOT
+servers:
+  - url: https://jokes.local/
+paths:
+  /:
+    get:
+      description: Gets a random joke
+      operationId: random
+      responses:
+        200:
+          description: A random joke.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joke'
+    post:
+      description: Creates a joke
+      operationId: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Joke'
+      responses:
+        201:
+          description: The created joke
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joke'
+components:
+  schemas:
+    Joke:
+      type: object
+      properties:
+        joke:
+          type: string

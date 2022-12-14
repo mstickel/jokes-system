@@ -1,0 +1,12 @@
+dependencies:
+- name: jokes-service
+  repository: file://../jokes-service/helm/jokes-service
+  version: 1.0.0-SNAPSHOT
+- name: jokes-ui
+  repository: file://../jokes-ui/helm/jokes-ui
+  version: 1.0.0-SNAPSHOT
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 11.8.1
+digest: sha256:07d058b0d88451f3fac64516fccad9357dabbf96a3a320999d57ca52a12af05b
+generated: "2022-12-08T14:22:11.655411-08:00"
